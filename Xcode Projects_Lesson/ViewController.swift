@@ -10,11 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var question: UITextField!
+    @IBOutlet weak var changeName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        print("Testing, testing!")
     }
 
-
+    @IBAction func submitChange(_ sender: UIButton) {
+        
+        if let newTitle = question.text {
+            changeName.text = newTitle
+        }
+        
+    }
+    
 }
 
